@@ -8,7 +8,7 @@
 #include <string>
 
 template <typename T>
-std::string TypeToString__()
+std::string typeToString__()
 {
     using TR = typename std::remove_reference<T>::type;
     #ifdef __GNUC__
@@ -32,6 +32,6 @@ std::string TypeToString__()
     return retStr;
 }
 
-# define TypeToString(_x) TypeToString__<decltype(_x)>()
+# define typeToString(_x) typeToString__<decltype(_x)>()
 
 #endif // TYPE_TO_STRING_H
